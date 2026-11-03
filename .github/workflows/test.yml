@@ -1,1 +1,14 @@
-bmFtZTogVDMgLSBTdGVwLWxldmVsIGFjdGlvbiB3aXRoIGJyYW5jaCBuYW1lCgpvbjoKICBwdXNoOgogIHdvcmtmbG93X2Rpc3BhdGNoOgoKam9iczoKICB0ZXN0OgogICAgcnVucy1vbjogdWJ1bnR1LWxhdGVzdAogICAgc3RlcHM6CiAgICAgIC0gbmFtZTogQ2hlY2tvdXQgdXNpbmcgYnJhbmNoIG5hbWUKICAgICAgICB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QG1haW4gICMgVDM6IGJyYW5jaCByZWYgLSBleHBlY3RlZCB0byBGQUlMCiAgICAgIC0gbmFtZTogU2hvdyByZXN1bHQKICAgICAgICBydW46IGVjaG8gIkNoZWNrb3V0IHN1Y2NlZWRlZCI=
+name: T3 - Step-level action with branch name
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout using branch name
+        uses: actions/checkout@main
+      - name: Show result
+        run: echo "Checkout succeeded"
